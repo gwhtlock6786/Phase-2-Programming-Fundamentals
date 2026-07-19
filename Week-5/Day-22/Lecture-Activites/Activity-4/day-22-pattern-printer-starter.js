@@ -56,16 +56,48 @@ function printTriangle(height) {
   // TODO: Outer loop - go through each row from 1 to height
   // HINT: for (let row = 1; row <= height; row++) { ... }
 
+  // ========================================
+  // SOLUTION
+  // ========================================
+
+  // Start the outer loop.
+  // This loop controls the current row of the triangle.
+  // It begins at row 1 and continues until it reaches the
+  // value stored in the height parameter.
+  for (let row = 1; row <= height; row++) {
     // TODO: Build a string to store stars for this row
     // HINT: let line = "";
+
+    // Create an empty string.
+    // This string will hold all of the stars for
+    // the current row before it is printed.
+    let line = "";
 
     // TODO: Inner loop - add stars for current row
     // HINT: for (let star = 1; star <= row; star++) { ... }
     //       line = line + "*";
 
+    // Start the inner loop.
+    // This loop controls how many stars appear on
+    // the current row.
+    //
+    // Example:
+    // Row 1 → loop runs 1 time
+    // Row 2 → loop runs 2 times
+    // Row 3 → loop runs 3 times
+    for (let star = 1; star <= row; star++) {
+      // Add one star to the line string.
+      // Each time the inner loop runs,
+      // another "*" is added.
+      line = line + "*";
+    }
+
     // TODO: Print the line of stars
     // HINT: console.log(line);
 
+    // Print the completed row of stars.
+    console.log(line);
+  }
 }
 
 // ========================================
@@ -166,7 +198,181 @@ printTriangle(1);
  *  *****
  * *******
  * HINT: Add spaces before stars, odd number of stars per row
+ *
+ *
  */
+
+// ========================================
+// CHALLENGE 1 SOLUTION
+// ========================================
+
+/**
+ * Print a square made of stars.
+ *
+ * @param {number} size - The width and height of the square.
+ *
+ * Example:
+ * printSquare(4)
+ * ****
+ * ****
+ * ****
+ * ****
+ */
+function printSquare(size) {
+  // Loop through each row of the square.
+  for (let row = 1; row <= size; row++) {
+    // Create an empty string for the current row.
+    let line = "";
+
+    // Add stars until the row reaches the desired width.
+    for (let column = 1; column <= size; column++) {
+      line = line + "*";
+    }
+
+    // Print the completed row.
+    console.log(line);
+  }
+}
+
+// ========================================
+// CHALLENGE 2 SOLUTION
+// ========================================
+
+/**
+ * Print an upside-down triangle.
+ *
+ * @param {number} height - The number of rows.
+ *
+ * Example:
+ * printInvertedTriangle(4)
+ * ****
+ * ***
+ * **
+ * *
+ */
+function printInvertedTriangle(height) {
+  // Start with the maximum number of stars.
+  // Decrease the number of stars each row.
+  for (let row = height; row >= 1; row--) {
+    // Create an empty string.
+    let line = "";
+
+    // Add the correct number of stars.
+    for (let star = 1; star <= row; star++) {
+      line = line + "*";
+    }
+
+    // Print the completed row.
+    console.log(line);
+  }
+}
+
+// ========================================
+// CHALLENGE 3 SOLUTION
+// ========================================
+
+/**
+ * Print a centered pyramid.
+ *
+ * @param {number} height - Number of rows.
+ *
+ * Example:
+ * printPyramid(4)
+ *    *
+ *   ***
+ *  *****
+ * *******
+ */
+function printPyramid(height) {
+  // Loop through each row.
+  for (let row = 1; row <= height; row++) {
+    // Start with an empty string.
+    let line = "";
+
+    // ========================================
+    // Add leading spaces
+    // ========================================
+
+    // The first row needs the most spaces.
+    // Each new row needs one fewer space.
+    for (let space = 1; space <= height - row; space++) {
+      line = line + " ";
+    }
+
+    // ========================================
+    // Add stars
+    // ========================================
+
+    // Each row contains an odd number of stars.
+    // Formula:
+    // Row 1 = 1 star
+    // Row 2 = 3 stars
+    // Row 3 = 5 stars
+    // Row 4 = 7 stars
+    for (let star = 1; star <= row * 2 - 1; star++) {
+      line = line + "*";
+    }
+
+    // Print the completed pyramid row.
+    console.log(line);
+  }
+}
+
+// ========================================
+// CHALLENGE TESTS
+// ========================================
+
+console.log("\n=== CHALLENGE 1: PRINT SQUARE ===\n");
+
+console.log("Expected:");
+console.log("****");
+console.log("****");
+console.log("****");
+console.log("****");
+
+console.log("\nYour Output:");
+printSquare(4);
+
+console.log("\n===============================\n");
+
+console.log("=== CHALLENGE 2: INVERTED TRIANGLE ===\n");
+
+console.log("Expected:");
+console.log("****");
+console.log("***");
+console.log("**");
+console.log("*");
+
+console.log("\nYour Output:");
+printInvertedTriangle(4);
+
+console.log("\n===============================\n");
+
+console.log("=== CHALLENGE 3: CENTERED PYRAMID ===\n");
+
+console.log("Expected:");
+console.log("   *");
+console.log("  ***");
+console.log(" *****");
+console.log("*******");
+
+console.log("\nYour Output:");
+printPyramid(4);
+
+console.log("\n===============================\n");
+
+// Additional Tests
+
+console.log("=== ADDITIONAL TESTS ===\n");
+
+console.log("Square (Size 6)");
+printSquare(6);
+
+console.log("\nInverted Triangle (Height 6)");
+printInvertedTriangle(6);
+
+console.log("\nCentered Pyramid (Height 6)");
+printPyramid(6);
 
 // ========================================
 // BONUS: Visualize Restaurant Seating
@@ -189,7 +395,7 @@ function printTableLayout(rows, tablesPerRow) {
   }
 }
 
-printTableLayout(3, 4);  // 3 rows, 4 tables per row
+printTableLayout(3, 4); // 3 rows, 4 tables per row
 
 console.log("\n=== Employee Schedule Grid ===\n");
 
@@ -207,7 +413,7 @@ function printScheduleGrid(days, shiftsPerDay) {
   }
 }
 
-printScheduleGrid(5, 3);  // 5 days, 3 shifts per day
+printScheduleGrid(5, 3); // 5 days, 3 shifts per day
 
 /*
  * NESTED LOOPS IN REAL PROGRAMMING:
