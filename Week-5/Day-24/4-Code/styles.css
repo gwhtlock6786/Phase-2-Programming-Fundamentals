@@ -1,0 +1,172 @@
+/* ============================================
+   Restaurant POS Calculator Styles
+   Day 24: Calculator Project
+   ============================================ */
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body: Center calculator on page with gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Calculator container: White card with shadow */
+.calculator {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Calculator title */
+.calculator h1 {
+  text-align: center;
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Display screen: Dark background with green text (like old calculators) */
+.display {
+  background: #2d3748;
+  color: #48bb78;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: right;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  word-wrap: break-word;
+  overflow-x: auto;
+  /* Allow horizontal scroll for very long numbers */
+}
+
+/* Button grid: 4 columns with gaps between buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* All buttons: Base styles */
+button {
+  padding: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect: Lift up slightly */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button active effect: Push down when clicked */
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Number buttons: Light gray background */
+.number {
+  background: #edf2f7;
+  color: #2d3748;
+}
+
+.number:hover {
+  background: #e2e8f0;
+}
+
+/* Operation buttons: Purple (matches theme) */
+.operation {
+  background: #667eea;
+  color: white;
+}
+
+.operation:hover {
+  background: #5a67d8;
+}
+
+/* Equals button: Green (indicates success/completion) */
+.equals {
+  background: #48bb78;
+  color: white;
+}
+
+.equals:hover {
+  background: #38a169;
+}
+
+/* Clear button: Red (indicates reset/danger) and spans full width */
+.clear {
+  background: #f56565;
+  color: white;
+  grid-column: span 4; /* Takes up all 4 columns */
+}
+
+.clear:hover {
+  background: #e53e3e;
+}
+
+/* ============================================
+   Responsive Design: Smaller screens
+   ============================================ */
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 36px;
+    padding: 20px;
+    min-height: 60px;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .calculator h1 {
+    font-size: 20px;
+  }
+}
+
+/* ============================================
+   Accessibility: Focus styles for keyboard navigation
+   ============================================ */
+
+button:focus {
+  outline: 3px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Print styles: Hide calculator when printing
+   ============================================ */
+
+@media print {
+  .calculator {
+    display: none;
+  }
+}
