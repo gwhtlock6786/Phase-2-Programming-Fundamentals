@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Changes Practice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Restaurant Style Practice</h1>
+
+      <!-- =====================================
+         FEATURE 1
+         Color Picker
+    ====================================== -->
+
+      <section class="card">
+        <h2>Choose a Theme Color</h2>
+
+        <div class="buttons">
+          <button id="redBtn">Red</button>
+          <button id="blueBtn">Blue</button>
+          <button id="greenBtn">Green</button>
+        </div>
+
+        <!-- This box will change colors -->
+        <div id="colorBox"></div>
+      </section>
+
+      <!-- =====================================
+         FEATURE 2
+         Business Hours Toggle
+    ====================================== -->
+
+      <section class="card">
+        <h2>Business Hours</h2>
+
+        <button id="toggleBtn">Show Hours</button>
+
+        <div id="hoursBox">
+          <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+          <p>Saturday: 10:00 AM - 6:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+/* ===========================
+   Reset
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.container {
+  width: 700px;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button {
+  padding: 10px 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #0077cc;
+  color: white;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* ===========================
+   Color Box
+=========================== */
+
+#colorBox {
+  width: 250px;
+  height: 150px;
+  background: gray;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+
+/* ===========================
+   Hours Section
+=========================== */
+
+#hoursBox {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #efefef;
+  border-radius: 8px;
+}
