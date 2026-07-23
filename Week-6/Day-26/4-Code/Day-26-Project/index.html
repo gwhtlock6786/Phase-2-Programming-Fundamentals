@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown in the browser tab -->
+    <title>Shopping List App</title>
+
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main container that holds everything -->
+    <div class="container">
+      <!-- Page heading -->
+      <h1>🛒 Shopping List</h1>
+
+      <!-- Small description -->
+      <p class="subtitle">Keep track of your grocery items.</p>
+
+      <label for="newItem">Add Grocery Item:</label>
+      <input
+        type="text"
+        id="newItem"
+        name="newItem"
+        placeholder="Enter a shopping item"
+        required
+      />
+
+      <!-- Button to add another item -->
+      <button id="add-button">Add New Item</button>
+
+      <!-- Displays the total number of shopping items -->
+      <p id="item-count">Total Items: 0</p>
+
+      <!-- Unordered list where shopping items will appear -->
+      <ul id="shopping-items"></ul>
+    </div>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

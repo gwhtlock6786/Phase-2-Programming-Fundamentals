@@ -1,0 +1,93 @@
+/*
+=========================================
+Restaurant Menu Styles
+Author: Your Name
+=========================================
+*/
+
+/* Reset some default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the entire page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: white;
+  min-height: 100vh;
+
+  /* Center everything */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main menu container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Page heading */
+h1 {
+  text-align: center;
+  margin: 30px;
+  font-size: 2.5rem;
+  color: #fbbf24;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Menu list */
+#menu-list {
+  list-style: none;
+}
+
+/* Individual menu items */
+#menu-list li {
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  border-left: 6px solid #f59e0b;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+#menu-list li:hover {
+  transform: translateX(10px);
+  background: #f59e0b;
+  color: #111827;
+  font-weight: bold;
+}
+
+/* Remove margin from last item */
+#menu-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #menu-list li {
+    font-size: 1rem;
+  }
+}
