@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes page responsive on different screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser tab title -->
+    <title>Todo List Application</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main application container -->
+    <div id="app">
+      <!-- Page heading -->
+      <h1>✅ My Todo List</h1>
+
+      <!-- Description -->
+      <p class="subtitle">Organize your tasks and stay productive.</p>
+
+      <!-- Section containing input and button -->
+      <div id="add-section">
+        <!-- Input where users type tasks -->
+        <input type="text" id="todo-input" placeholder="Enter a task..." />
+
+        <!-- Button to add todos -->
+        <button id="add-btn">Add Task</button>
+      </div>
+
+      <!-- Displays remaining task count -->
+      <p id="task-count">Tasks Remaining: 0</p>
+
+      <!-- Todo items will be added here -->
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
