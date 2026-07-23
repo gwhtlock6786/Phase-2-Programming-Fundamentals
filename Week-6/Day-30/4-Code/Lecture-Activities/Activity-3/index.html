@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser title -->
+    <title>Todo Local Storage Filter</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Page title -->
+      <h1>✅ Todo List</h1>
+
+      <p class="subtitle">Filter preference saved automatically</p>
+
+      <!-- Add todo section -->
+      <div class="add-section">
+        <input id="todo-input" type="text" placeholder="Enter a task..." />
+
+        <button id="add-btn">Add</button>
+      </div>
+
+      <!-- ==================================================
+    
+    FILTER BUTTONS
+
+    ================================================== -->
+
+      <div class="filter-buttons">
+        <button id="all-btn">All</button>
+
+        <button id="active-btn">Active</button>
+
+        <button id="completed-btn">Completed</button>
+      </div>
+
+      <!-- Remaining count -->
+      <p id="task-count">Tasks Remaining: 0</p>
+
+      <!-- Todo list -->
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
