@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser tab title -->
+    <title>Feedback Form Messages</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main page container -->
+    <div class="container">
+      <!-- Page title -->
+      <h1>Customer Feedback</h1>
+
+      <!-- Description -->
+      <p class="subtitle">Practice displaying validation messages</p>
+
+      <!-- 
+            ==================================================
+            NEW CHANGE FROM ACTIVITY 2:
+            
+            This div will display success and error messages
+            directly on the webpage instead of only console.
+            ==================================================
+        -->
+      <div id="message-area"></div>
+
+      <!-- Feedback form -->
+      <form id="feedback-form">
+        <!-- Name input -->
+        <div class="form-group">
+          <label for="name"> Name: </label>
+
+          <input type="text" id="name" placeholder="Enter your name" />
+        </div>
+
+        <!-- Email input -->
+        <div class="form-group">
+          <label for="email"> Email: </label>
+
+          <input type="email" id="email" placeholder="Enter your email" />
+        </div>
+
+        <!-- Visit date -->
+        <div class="form-group">
+          <label for="visit-date"> Visit Date: </label>
+
+          <input type="date" id="visit-date" />
+        </div>
+
+        <!-- Feedback text -->
+        <div class="form-group">
+          <label for="feedback"> Feedback: </label>
+
+          <textarea
+            id="feedback"
+            rows="5"
+            placeholder="Enter feedback..."
+          ></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+
+    <!-- Connect JavaScript -->
+    <script src="./form-practice.js"></script>
+  </body>
+</html>

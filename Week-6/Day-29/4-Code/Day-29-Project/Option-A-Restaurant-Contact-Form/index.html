@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser title -->
+    <title>Restaurant Contact Form</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🍽️ Contact Our Restaurant</h1>
+
+      <p class="subtitle">Have a question? Send us a message!</p>
+
+      <!-- Message area for errors/success -->
+      <div id="message-area"></div>
+
+      <!-- Contact Form -->
+      <form id="contact-form">
+        <label for="name"> Name </label>
+
+        <input type="text" id="name" placeholder="Your name" />
+
+        <label for="email"> Email </label>
+
+        <input type="email" id="email" placeholder="example@email.com" />
+
+        <label for="phone"> Phone (Optional) </label>
+
+        <input type="tel" id="phone" placeholder="555-555-5555" />
+
+        <label for="message"> Message </label>
+
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="How can we help?"
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

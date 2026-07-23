@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the page responsive on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title displayed in browser tab -->
+    <title>Customer Feedback Form</title>
+
+    <!-- Connects our CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main container for the form -->
+    <div class="container">
+      <!-- Page heading -->
+      <h1>Customer Feedback</h1>
+
+      <!-- Description text -->
+      <p class="subtitle">Tell us about your experience!</p>
+
+      <!-- 
+            Form element.
+            JavaScript will listen for when this form
+            is submitted.
+        -->
+      <form id="feedback-form">
+        <!-- Name input section -->
+        <div class="form-group">
+          <!-- Label connected to name input -->
+          <label for="name"> Name: </label>
+
+          <!-- 
+                    Text input for user's name.
+                    id allows JavaScript to find it.
+                -->
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <!-- Email input section -->
+        <div class="form-group">
+          <!-- Email label -->
+          <label for="email"> Email: </label>
+
+          <!-- 
+                    Email input.
+                    Browser automatically checks
+                    email formatting.
+                -->
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- Visit date section -->
+        <div class="form-group">
+          <!-- Date label -->
+          <label for="visit-date"> Visit Date: </label>
+
+          <!-- 
+                    Date input creates a calendar picker.
+                -->
+          <input type="date" id="visit-date" name="visit-date" required />
+        </div>
+
+        <!-- Feedback section -->
+        <div class="form-group">
+          <!-- Textarea label -->
+          <label for="feedback"> Feedback: </label>
+
+          <!-- 
+                    Textarea allows multiple lines
+                    of text.
+                -->
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="5"
+            placeholder="Tell us what you think..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="form-practice.js"></script>
+  </body>
+</html>
