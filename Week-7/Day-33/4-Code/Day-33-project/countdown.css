@@ -1,0 +1,33 @@
+/* Center the page content */
+body {
+  font-family: Arial;
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+/* Large timer display */
+#timer {
+  font-size: 72px;
+  margin: 30px;
+  font-family: monospace;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Button styling */
+.controls button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Warning class added when time is low */
+#timer.warning {
+  color: red;
+}

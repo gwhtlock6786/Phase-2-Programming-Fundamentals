@@ -1,0 +1,44 @@
+/* Style the page */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+}
+
+/* Style the heading */
+h1 {
+  color: #333;
+}
+
+/* Style the button */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+}
+
+/* Add hover effect */
+button:hover {
+  background-color: #218838;
+}
+
+/* Message container */
+#messages {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+/* Individual messages */
+p {
+  background-color: white;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px gray;
+}
