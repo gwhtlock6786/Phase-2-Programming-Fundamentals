@@ -1,0 +1,37 @@
+Activity 1: localStorage API Practice
+Goal: Practice all five localStorage methods
+
+Instructions:
+
+Open your browser console (F12, then Console tab)
+Type each of these commands and observe the results:
+// Step 1: Clear everything first
+localStorage.clear();
+
+// Step 2: Add some restaurant data
+localStorage.setItem('restaurant', 'Sunrise Cafe');
+localStorage.setItem('openTime', '6:00 AM');
+localStorage.setItem('closeTime', '9:00 PM');
+localStorage.setItem('seatingCapacity', '45');
+
+// Step 3: Read one value
+console.log(localStorage.getItem('restaurant'));
+
+// Step 4: Check how many items are saved
+console.log('Total items:', localStorage.length);
+
+// Step 5: Get the key name at position 0
+console.log('First key:', localStorage.key(0));
+
+// Step 6: Remove just the seating capacity
+localStorage.removeItem('seatingCapacity');
+
+// Step 7: Verify it is gone
+console.log('Total items now:', localStorage.length);
+console.log('Seating:', localStorage.getItem('seatingCapacity')); // Should be null
+Success Criteria:
+
+☐ You can add items with setItem
+☐ You can read items with getItem
+☐ You can delete one item with removeItem
+☐ You understand that clear deletes everything

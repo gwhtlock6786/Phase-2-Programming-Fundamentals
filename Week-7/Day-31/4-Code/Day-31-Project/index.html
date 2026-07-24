@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Specifies the character encoding for the webpage -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title displayed in the browser tab -->
+    <title>Enhanced Todo List - Sprint 2 Final</title>
+
+    <!-- Links the external CSS stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- ==========================================================
+         MAIN APPLICATION CONTAINER
+         Holds the entire Todo application
+    =========================================================== -->
+    <div class="container">
+      <!-- Page Heading -->
+      <h1>✅ Enhanced Todo List</h1>
+
+      <!-- Small description -->
+      <p class="subtitle">
+        Organize your tasks with filters and completion tracking.
+      </p>
+
+      <!-- ==========================================================
+           MESSAGE AREA
+           Displays validation and success messages
+      =========================================================== -->
+      <div id="message-area"></div>
+
+      <!-- ==========================================================
+           ADD TODO SECTION
+      =========================================================== -->
+      <div class="add-section">
+        <!-- Text input for entering a new todo -->
+        <input type="text" id="todo-input" placeholder="Enter a new task..." />
+
+        <!-- Button to add a new todo -->
+        <button id="add-btn">Add Task</button>
+      </div>
+
+      <!-- ==========================================================
+           FILTER BUTTONS
+      =========================================================== -->
+      <div class="filter-buttons">
+        <!-- Displays every todo -->
+        <button id="all-btn" class="active-filter">All</button>
+
+        <!-- Displays only incomplete todos -->
+        <button id="active-btn">Active</button>
+
+        <!-- Displays only completed todos -->
+        <button id="completed-btn">Completed</button>
+      </div>
+
+      <!-- ==========================================================
+           TASK INFORMATION
+      =========================================================== -->
+      <div class="task-info">
+        <!-- Remaining task count -->
+        <p id="task-count">Tasks Remaining: 0</p>
+
+        <!-- Current filter display -->
+        <p id="current-filter">
+          Current Filter:
+          <span>All</span>
+        </p>
+      </div>
+
+      <!-- ==========================================================
+           TODO LIST
+           JavaScript will dynamically insert todos here
+      =========================================================== -->
+      <ul id="todo-list"></ul>
+
+      <!-- ==========================================================
+           INSTRUCTIONS
+      =========================================================== -->
+      <div class="instructions">
+        <h3>How to Use</h3>
+
+        <ul>
+          <li>➕ Add a new task using the text box.</li>
+          <li>✅ Click a task to mark it complete.</li>
+          <li>↩️ Click a completed task again to mark it active.</li>
+          <li>🔍 Use the filter buttons to view tasks.</li>
+          <li>💾 Your selected filter is automatically saved.</li>
+        </ul>
+      </div>
+
+      <!-- ==========================================================
+           SPRINT DEMO INFORMATION
+           Included to satisfy project requirements
+      =========================================================== -->
+      <footer>
+        <p>
+          Sprint 2 Final Project • Enhanced Todo List with Toggle, Filters, and
+          Local Storage
+        </p>
+
+        <p class="demo-note">
+          Demo Status:
+          <strong>Live demo completed</strong>
+        </p>
+      </footer>
+    </div>
+
+    <!-- ==========================================================
+         LINK JAVASCRIPT FILE
+    =========================================================== -->
+    <script src="./script.js"></script>
+  </body>
+</html>

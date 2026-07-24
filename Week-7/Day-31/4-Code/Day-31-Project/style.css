@@ -1,0 +1,462 @@
+/* ==========================================================
+   GLOBAL RESET
+   Removes the browser's default spacing and sizing.
+========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   PAGE STYLING
+========================================================== */
+
+body {
+  /* Sets the font used throughout the page */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Creates a blue gradient background */
+  background: linear-gradient(135deg, #4facfe, #00c6fb);
+
+  /* Makes the page fill the entire browser height */
+  min-height: 100vh;
+
+  /* Centers the application horizontally */
+  display: flex;
+  justify-content: center;
+
+  /* Centers the application vertically */
+  align-items: center;
+
+  /* Adds spacing around the edges on small screens */
+  padding: 30px;
+}
+
+/* ==========================================================
+   MAIN APPLICATION CONTAINER
+========================================================== */
+
+.container {
+  /* White card background */
+  background: white;
+
+  /* Limits the maximum width */
+  width: 100%;
+  max-width: 700px;
+
+  /* Space inside the card */
+  padding: 35px;
+
+  /* Rounded corners */
+  border-radius: 18px;
+
+  /* Shadow behind the card */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================
+   PAGE TITLE
+========================================================== */
+
+h1 {
+  text-align: center;
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================
+   SUBTITLE
+========================================================== */
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ==========================================================
+   MESSAGE AREA
+========================================================== */
+
+#message-area {
+  margin-bottom: 20px;
+}
+
+/* ==========================================================
+   ERROR MESSAGE
+========================================================== */
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+
+  border-left: 6px solid #c62828;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+
+/* ==========================================================
+   SUCCESS MESSAGE
+========================================================== */
+
+.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+
+  border-left: 6px solid #2e7d32;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+
+/* ==========================================================
+   ADD TODO SECTION
+========================================================== */
+
+.add-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* ==========================================================
+   TODO INPUT
+========================================================== */
+
+#todo-input {
+  flex: 1;
+
+  padding: 14px;
+
+  font-size: 16px;
+
+  border: 2px solid #cccccc;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* ==========================================================
+   INPUT FOCUS EFFECT
+========================================================== */
+
+#todo-input:focus {
+  outline: none;
+
+  border-color: #2196f3;
+
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+}
+
+/* ==========================================================
+   BUTTON STYLING
+========================================================== */
+
+button {
+  background: #2196f3;
+
+  color: white;
+
+  border: none;
+
+  padding: 14px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+/* ==========================================================
+   BUTTON HOVER
+========================================================== */
+
+button:hover {
+  background: #1976d2;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   FILTER BUTTON CONTAINER
+========================================================== */
+
+.filter-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  flex-wrap: wrap;
+}
+
+/* ==========================================================
+   ACTIVE FILTER BUTTON
+
+   Applied with JavaScript
+========================================================== */
+
+.active-filter {
+  background: #43a047 !important;
+  color: white;
+}
+
+.active-filter:hover {
+  background: #2e7d32 !important;
+}
+
+/* ==========================================================
+   TASK INFO SECTION
+========================================================== */
+
+.task-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+/* ==========================================================
+   TASK COUNT
+========================================================== */
+
+#task-count {
+  color: #1565c0;
+
+  font-weight: bold;
+}
+
+/* ==========================================================
+   CURRENT FILTER DISPLAY
+========================================================== */
+
+#current-filter {
+  color: #555;
+
+  font-weight: bold;
+}
+
+#current-filter span {
+  color: #2e7d32;
+}
+
+/* ==========================================================
+   TODO LIST
+========================================================== */
+
+#todo-list {
+  list-style: none;
+}
+
+/* ==========================================================
+   INDIVIDUAL TODO ITEM
+========================================================== */
+
+.todo-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #f8f9fa;
+
+  margin-bottom: 12px;
+
+  padding: 15px;
+
+  border-left: 6px solid #2196f3;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+/* ==========================================================
+   TODO HOVER EFFECT
+========================================================== */
+
+.todo-item:hover {
+  background: #eef7ff;
+
+  transform: translateX(5px);
+}
+
+/* ==========================================================
+   TODO TEXT
+========================================================== */
+
+.todo-text {
+  flex: 1;
+
+  cursor: pointer;
+
+  font-size: 17px;
+}
+
+/* ==========================================================
+   COMPLETED TODO
+
+   Applied by JavaScript when
+   completed === true
+========================================================== */
+
+.completed {
+  text-decoration: line-through;
+
+  color: gray;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   DELETE BUTTON
+========================================================== */
+
+.delete-btn {
+  background: #e53935;
+
+  margin-left: 15px;
+
+  padding: 10px 14px;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* ==========================================================
+   INSTRUCTIONS BOX
+========================================================== */
+
+.instructions {
+  margin-top: 35px;
+
+  padding: 20px;
+
+  background: #f4f8fb;
+
+  border-radius: 10px;
+}
+
+.instructions h3 {
+  color: #1565c0;
+
+  margin-bottom: 10px;
+}
+
+.instructions ul {
+  margin-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+
+  color: #555;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 14px;
+
+  border-top: 1px solid #ddd;
+
+  padding-top: 20px;
+}
+
+/* ==========================================================
+   DEMO STATUS
+========================================================== */
+
+.demo-note {
+  margin-top: 10px;
+
+  color: #2e7d32;
+
+  font-weight: bold;
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 650px) {
+  /* Stack the add section vertically */
+  .add-section {
+    flex-direction: column;
+  }
+
+  /* Make buttons full width */
+  .add-section button {
+    width: 100%;
+  }
+
+  /* Stack task information */
+  .task-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  /* Stack filter buttons */
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+  }
+
+  /* Stack todo item content */
+  .todo-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .delete-btn {
+    width: 100%;
+
+    margin-left: 0;
+  }
+}
