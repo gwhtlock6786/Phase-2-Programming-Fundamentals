@@ -1,0 +1,119 @@
+/* ============================================
+   SHIFT HOURS DASHBOARD STYLES
+============================================ */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #f1f5f9;
+
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #1e40af;
+}
+
+/* ============================================
+   FILTER
+============================================ */
+
+.filter-section {
+  background: white;
+
+  padding: 20px;
+
+  width: 350px;
+
+  margin: auto;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+select {
+  padding: 10px;
+
+  font-size: 16px;
+
+  border-radius: 6px;
+}
+
+/* ============================================
+   HOURS CARD
+============================================ */
+
+.hours-card {
+  background: #2563eb;
+
+  color: white;
+
+  width: 300px;
+
+  margin: 30px auto;
+
+  padding: 20px;
+
+  text-align: center;
+
+  border-radius: 12px;
+}
+
+#total-hours {
+  font-size: 36px;
+
+  font-weight: bold;
+}
+
+/* ============================================
+   TABLE
+============================================ */
+
+.table-section {
+  display: flex;
+
+  justify-content: center;
+}
+
+table {
+  width: 90%;
+
+  max-width: 1000px;
+
+  background: white;
+
+  border-collapse: collapse;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+  background: #2563eb;
+
+  color: white;
+}
+
+th {
+  padding: 15px;
+
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f8fafc;
+}

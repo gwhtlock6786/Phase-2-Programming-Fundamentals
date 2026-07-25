@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shift Hours Calculator V2</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Employee Shift Hours Dashboard - Refactored</h1>
+
+      <p>Filter employees and calculate total scheduled hours</p>
+    </header>
+
+    <main>
+      <!-- ========================================
+         FILTER SECTION
+    ========================================= -->
+
+      <section class="filter-section">
+        <label for="employee-filter"> Select Employee: </label>
+
+        <select id="employee-filter">
+          <!-- Options added by JavaScript -->
+        </select>
+      </section>
+
+      <!-- ========================================
+         TOTAL HOURS DISPLAY
+    ========================================= -->
+
+      <section class="hours-card">
+        <h2>Total Scheduled Hours</h2>
+
+        <p id="total-hours">0 Hours</p>
+      </section>
+
+      <!-- ========================================
+         SHIFT TABLE
+    ========================================= -->
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee</th>
+
+              <th>Date</th>
+
+              <th>Start Time</th>
+
+              <th>End Time</th>
+
+              <th>Role</th>
+
+              <th>Hours</th>
+            </tr>
+          </thead>
+
+          <tbody id="shift-table-body">
+            <!-- JavaScript creates rows -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script type="module" src="./refactored-hours.js"></script>
+  </body>
+</html>
