@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather Dashboard</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Page Header -->
+
+    <header>
+      <h1>Weather Dashboard</h1>
+
+      <p>Search for Texas city weather</p>
+    </header>
+
+    <main>
+      <!-- Search Section -->
+
+      <section class="search-section">
+        <input id="city-input" type="text" placeholder="Enter city name" />
+
+        <button id="search-btn">Search</button>
+      </section>
+
+      <!-- Loading Message -->
+
+      <div id="loading">Loading weather data...</div>
+
+      <!-- Error Message -->
+
+      <div id="error-message"></div>
+
+      <!-- Weather Results -->
+
+      <section id="weather-container"></section>
+    </main>
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
