@@ -1,0 +1,298 @@
+// ============================================
+// ACTIVITY 3: PSEUDOCODE CHALLENGE
+// Restaurant Management System
+// ============================================
+//
+// Goal:
+// Write the algorithm steps BEFORE writing code.
+//
+// Pseudocode rules:
+// - Use plain English
+// - Focus on logic
+// - Do not worry about JavaScript syntax
+// - Think about inputs, processing, and outputs
+//
+// ============================================
+
+
+
+// ============================================
+// CHALLENGE 1:
+// Find the employee who worked the most hours
+// ============================================
+//
+// Problem:
+// Given a list of employees with their total hours,
+// find the employee with the highest number of hours.
+//
+// Example Data:
+//
+// [
+//   { name: "Maria", hours: 40 },
+//   { name: "James", hours: 35 },
+//   { name: "Alex", hours: 45 }
+// ]
+//
+// Expected Result:
+// Alex worked the most hours
+//
+// ============================================
+
+
+// PSEUDOCODE:
+//
+// START
+//
+// Create variable to store employee with highest hours
+//
+// Set highest hours to 0
+//
+// Loop through every employee
+//
+//     Check current employee hours
+//
+//     If current employee hours are greater than highest hours
+//
+//          Update highest employee
+//
+//          Update highest hours
+//
+//     End If
+//
+// End Loop
+//
+// Return employee with highest hours
+//
+// END
+
+
+
+
+
+// ============================================
+// CHALLENGE 2:
+// Calculate total food cost for an order
+// ============================================
+//
+// Problem:
+// Given an order containing multiple items,
+// calculate the total cost.
+//
+// Example:
+//
+// [
+//   { item: "Burger", price: 8.99 },
+//   { item: "Fries", price: 3.99 },
+//   { item: "Drink", price: 2.50 }
+// ]
+//
+// Expected Result:
+// Total = $15.48
+//
+// ============================================
+
+
+// PSEUDOCODE:
+//
+// START
+//
+// Create variable called total cost
+//
+// Set total cost to 0
+//
+// Loop through every item in the order
+//
+//     Add item's price to total cost
+//
+// End Loop
+//
+// Return total cost
+//
+// END
+
+
+
+
+
+// ============================================
+// CHALLENGE 3:
+// Find all employees working a specific shift
+// ============================================
+//
+// Problem:
+// Given a list of shifts,
+// find all employees working on a certain day/time.
+//
+// Example:
+//
+// Search:
+// Monday 09:00
+//
+// Return:
+// Employees scheduled at that time
+//
+// ============================================
+
+
+// PSEUDOCODE:
+//
+// START
+//
+// Create empty list for matching employees
+//
+// Get requested shift information
+//
+// Loop through all employee shifts
+//
+//     Check if shift matches requested day/time
+//
+//     If it matches
+//
+//          Add employee to results list
+//
+//     End If
+//
+// End Loop
+//
+// Return list of employees
+//
+// END
+
+
+
+
+
+// ============================================
+// CHALLENGE 4:
+// Sort employees by hours worked
+// Highest to Lowest
+// ============================================
+//
+// Problem:
+// Organize employees based on who worked
+// the most hours.
+//
+// Example:
+//
+// Before:
+//
+// Maria - 30 hours
+// James - 45 hours
+// Alex - 20 hours
+//
+// After:
+//
+// James - 45 hours
+// Maria - 30 hours
+// Alex - 20 hours
+//
+// ============================================
+
+
+// PSEUDOCODE:
+//
+// START
+//
+// Get list of employees
+//
+// Compare employee hours against each other
+//
+// If first employee has fewer hours than second employee
+//
+//     Swap their positions
+//
+// Continue comparing employees
+//
+// Repeat until list is sorted
+//
+// Return sorted employee list
+//
+// END
+
+
+
+
+
+// ============================================
+// CHALLENGE 5:
+// Check if a menu item is available
+// ============================================
+//
+// Problem:
+// Search the menu to determine if an item exists
+// and is currently available.
+//
+// Example:
+//
+// Search:
+// Cheeseburger
+//
+// Return:
+// Available
+//
+// ============================================
+
+
+// PSEUDOCODE:
+//
+// START
+//
+// Get menu item name to search for
+//
+// Loop through menu items
+//
+//     Compare search name with current menu item
+//
+//     If names match
+//
+//          Check availability status
+//
+//          Return available status
+//
+//     End If
+//
+// End Loop
+//
+// If no item was found
+//
+//     Return "Item unavailable"
+//
+// END
+
+
+
+
+
+// ============================================
+// REFLECTION QUESTIONS
+// ============================================
+//
+// 1. Which problems require a loop?
+//
+// Answer:
+// All problems require checking through a collection
+// of employees, orders, shifts, or menu items.
+//
+//
+//
+// 2. Which problems return one item?
+//
+// Answer:
+// Finding highest employee hours
+// Finding a specific menu item
+//
+//
+//
+// 3. Which problems return multiple items?
+//
+// Answer:
+// Finding employees working a specific shift
+//
+//
+//
+// 4. Which problem requires sorting?
+//
+// Answer:
+// Sorting employees by hours worked
+//
+// ============================================
