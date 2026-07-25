@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Employee Shift Filter</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Employee Shift Scheduler</h1>
+
+      <p>Filter weekly shifts by employee</p>
+    </header>
+
+    <main>
+      <!-- ========================================
+             EMPLOYEE FILTER DROPDOWN
+        ========================================= -->
+
+      <section class="filter-section">
+        <label for="employee-filter"> Select Employee: </label>
+
+        <select id="employee-filter">
+          <!-- JavaScript will add options here -->
+        </select>
+      </section>
+
+      <!-- ========================================
+             SHIFT TABLE
+        ========================================= -->
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee</th>
+
+              <th>Date</th>
+
+              <th>Start Time</th>
+
+              <th>End Time</th>
+
+              <th>Role</th>
+            </tr>
+          </thead>
+
+          <tbody id="shift-table-body">
+            <!-- JavaScript creates rows here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- 
+        type="module" allows importing shift-data.js
+    -->
+
+    <script type="module" src="./filter-server.js"></script>
+  </body>
+</html>

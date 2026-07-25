@@ -1,0 +1,117 @@
+/* ============================================
+   EMPLOYEE FILTER SCHEDULER STYLES
+============================================ */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: #f1f5f9;
+
+  margin: 0;
+
+  padding: 30px;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+
+header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #1e40af;
+}
+
+header p {
+  color: #475569;
+}
+
+/* ============================================
+   FILTER AREA
+============================================ */
+
+.filter-section {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  width: 350px;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  margin-right: 10px;
+}
+
+select {
+  padding: 10px;
+
+  font-size: 16px;
+
+  border-radius: 6px;
+
+  border: 1px solid #cbd5e1;
+}
+
+/* ============================================
+   TABLE
+============================================ */
+
+.table-section {
+  display: flex;
+
+  justify-content: center;
+}
+
+table {
+  width: 90%;
+
+  max-width: 900px;
+
+  background: white;
+
+  border-collapse: collapse;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+  background: #2563eb;
+
+  color: white;
+}
+
+th {
+  padding: 15px;
+
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+  background: #f8fafc;
+}

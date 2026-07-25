@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Employee Shift Scheduler</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Weekly Employee Schedule</h1>
+
+      <p>Restaurant Shift Management</p>
+    </header>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Employee</th>
+
+            <th>Date</th>
+
+            <th>Start Time</th>
+
+            <th>End Time</th>
+
+            <th>Role</th>
+          </tr>
+        </thead>
+
+        <tbody id="shift-table-body">
+          <!-- JavaScript will add rows here -->
+        </tbody>
+      </table>
+    </main>
+
+    <!-- Important:
+         type="module" allows import/export
+    -->
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
