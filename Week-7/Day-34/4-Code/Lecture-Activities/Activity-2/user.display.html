@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <title>User Display</title>
+
+    <style>
+      /* Page styling */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f6f8;
+      }
+
+      /* Page heading */
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      /* Container for all user cards */
+      #user-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      /* User card styling */
+      .user-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      /* Add hover effect */
+      .user-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Card title */
+      .user-card h2 {
+        color: #007bff;
+        margin-top: 0;
+      }
+
+      /* Text styling */
+      .user-card p {
+        color: #555;
+        font-size: 16px;
+      }
+
+      /* Labels */
+      .label {
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page title -->
+    <h1>Our Team</h1>
+
+    <!-- Empty container where user cards will be added -->
+    <div id="user-list"></div>
+    <button id="showUsers">Show Users</button>
+
+    <script>
+      // Select the container where cards will be displayed
+      const userList = document.getElementById("user-list");
+
+      // Function to create a user card
+      function createUserCard(user) {
+        // Create a new div element
+        const card = document.createElement("div");
+
+        // Add the CSS class user-card
+        card.className = "user-card";
+
+        // Add user information inside the card
+        card.innerHTML = `
+
+        <h2>${user.name}</h2>
+
+        <p>
+          <span class="label">Email:</span>
+          ${user.email}
+        </p>
+
+        <p>
+          <span class="label">Company:</span>
+          ${user.company}
+        </p>
+
+      `;
+
+        // Return the finished card
+        return card;
+      }
+
+      // Function to get users from API
+      function fetchUsers() {
+        // Send request to Express API
+        fetch("http://localhost:3000/users")
+          // Convert response into JSON
+          .then((response) => {
+            // Check if request was successful
+            if (!response.ok) {
+              throw new Error("Failed to fetch users");
+            }
+
+            return response.json();
+          })
+
+          // Receive the user array
+          .then((users) => {
+            // Loop through each user
+            users.forEach((user) => {
+              // Create a card for this user
+              const userCard = createUserCard(user);
+
+              // Add card to the page
+              userList.appendChild(userCard);
+            });
+          })
+
+          // Catch any errors
+          .catch((error) => {
+            console.error("Error loading users:", error);
+
+            userList.innerHTML = `
+
+            <p>
+              Unable to load users.
+            </p>
+
+          `;
+          });
+      }
+
+      const showUsersButton = document.getElementById("showUsers");
+
+      showUsersButton.addEventListener("click", fetchUsers);
+      // Start fetching users when page loads
+      // fetchUsers();
+    </script>
+  </body>
+</html>
